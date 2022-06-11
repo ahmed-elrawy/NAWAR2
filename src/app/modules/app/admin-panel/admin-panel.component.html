@@ -1,0 +1,83 @@
+
+
+
+<table class="table" style="margin-top: 100px;">
+    <thead>
+      <tr>
+        <th scope="col">image</th>
+        <th scope="col">color</th>
+        <th scope="col">desc</th>
+        <th scope="col">ip</th>
+        <th scope="col">model</th>
+        <th scope="col">brand</th>
+        <th scope="col">status</th>
+        <th scope="col">update</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead>
+
+  </table>
+
+  
+
+  <!-- (ngSubmit)="onSubmit()" -->
+  <form [formGroup]="skillsForm"  >
+
+    <div formArrayName="skills" >
+      <div *ngFor="let skill of skills.controls; let i=index">
+        <div [formGroupName]="i" style="  border: 5px solid #2554; margin-bottom: 10px;       ">
+          <div class="row align-items-center g-3 mx-auto">
+
+            <div style="width:11%; margin-bottom: 10px;">
+              <img style="width:150px; height: 150px;"[src]="data?.[i]?.img?.data" alt="" class="img">
+            </div>
+
+
+            <div style="width:11%">
+                <label class="visually-hidden" for="inputEmail">Email</label>
+                <input formControlName="color" type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+    
+            <div style="width:11%">
+              <label class="visually-hidden" for="inputEmail">Email</label>
+              <input  formControlName="desc" type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+    
+    
+            <div style="width:11%">
+               <label class="visually-hidden" for="inputEmail">Email</label>
+               <input formControlName="ip" type="email" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+    
+    
+         <div style="width:11%">
+          <label class="visually-hidden" for="inputEmail">Email</label>
+          <input formControlName="model" type="email" class="form-control" id="inputEmail" placeholder="Email">
+         </div>
+    
+         <div style="width:11%">
+          <label class="visually-hidden" for="inputEmail">Email</label>
+            <input formControlName="name" type="email" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+
+          <div style="width:11%">
+            <label class="visually-hidden" for="inputEmail">status</label>
+              <input  formControlName="status" type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+
+
+            <div style="width:11%">
+              <button  class="btn btn-primary" (click)="updatephone(i)">update</button>
+            </div>
+
+            <div style="width:11%">
+              <button class="btn btn-danger" (click)="deletephone(data?.[i]?._id)">delete</button>
+            </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+</form>
+  

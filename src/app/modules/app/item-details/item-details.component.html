@@ -1,0 +1,47 @@
+<div style="margin-top: 150px"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="project-info-box mt-0">
+                <h5>{{data.name}}</h5>
+                <p class="mb-0">{{data.desc}}.</p>
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box">
+                <p><b>brand:</b> {{data.name}}</p>
+                <p><b>model:</b> {{data.model}}</p>
+                <p><b>serial :</b> {{data.ip}}</p>
+                <p><b>Date:</b> {{data.createdAt}}</p>
+
+                <!-- <p class="mb-0"><b>Budget:</b> $500</p> -->
+            </div><!-- / project-info-box -->
+
+
+                <div class="project-info-box mt-0">
+                    <h5>post owner info</h5>
+                    <p class="mb-0">post owner</p>
+                </div><!-- / project-info-box -->
+
+            <div class="project-info-box">
+       
+
+                <p><b>name :</b> {{user.username}}</p>
+
+                <p><b>phone :</b> {{user.phone}}</p>
+                <p><b>phone :</b> {{user.email}}</p>
+
+                
+                <!-- <p class="mb-0"><b>Budget:</b> $500</p> -->
+            </div><!-- / project-info-box -->
+
+
+
+
+        </div><!-- / column -->
+
+        <div class="col-md-7">
+            <img [src]="data.img.data" alt="project-image" class="rounded">
+ 
+        </div><!-- / column -->
+    </div>
+</div>

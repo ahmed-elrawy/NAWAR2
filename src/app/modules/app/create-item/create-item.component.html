@@ -1,0 +1,54 @@
+<div style="margin-top: 120px"></div>
+
+
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>Create a stolen phone post</h3>
+            <div class="card">
+                <form [formGroup]="createPostForm" class="form-card" (ngSubmit)="submit(createPostForm)">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">name<span class="text-danger"> *</span></label> 
+                            <select type="text" id="fname" formControlName="name" placeholder="name" >
+                                <option value="Xiaomi">Apple</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Nokia">Nokia</option>
+                                <option value="Oppo">Oppo</option>
+                                <option value="Xiaomi">Xiaomi</option>
+                                <option value="Xiaomi">Huawei</option>
+                                <option value="Xiaomi">Infinix</option>
+                                <option value="Xiaomi">Apple</option>
+                                <option value="Xiaomi">TOTU</option>
+                                <option value="Xiaomi">Vivo</option>
+                
+                              </select>
+                            </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">desc<span class="text-danger"> *</span></label> <input type="text" id="lname" formControlName="desc" placeholder="desc" > </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">ip<span class="text-danger"> *</span></label> <input type="text" id="email" formControlName="ip" placeholder="ip" > </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">model<span class="text-danger"> *</span></label> <input type="text" id="mob" formControlName="model" placeholder="model" > </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">color<span class="text-danger"> *</span></label> <input type="text" id="job" formControlName="color" placeholder="color" > </div>
+                    </div>
+
+
+                    <label class="image-upload-container btn btn-bwm" style="margin-top: 100px;">
+                        <span>Select Image</span>
+                        <input #imageInput
+                               type="file"
+                               accept="image/*"
+                               (change)="processFile(imageInput)">
+                      </label>
+                    <div class="row justify-content-end">
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Request a demo</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

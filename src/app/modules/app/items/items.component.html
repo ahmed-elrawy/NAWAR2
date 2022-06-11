@@ -1,0 +1,48 @@
+<div style="margin-top: 150px"></div>
+
+
+
+<div class="container mt-5 mb-5  "  >
+
+
+  
+  <div class="d-flex justify-content-center row" >
+    <div class="col-md-10">
+      <form  [formGroup]="filterForm" class="form-inline" (ngSubmit)="submit()">
+        <div class="row" >
+          <div class="col-6 ">
+            <input formControlName="name" type="text" class="form-control" id="inputPassword2" placeholder="Password">
+          </div>
+    
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary mb-2">filter by brand</button>
+          </div>
+        </div>
+    
+      </form>
+    </div>
+
+      <div class="col-md-10">
+          <div  *ngFor="let item of data">
+            <div *ngIf="item.status ==1" class="row p-2 bg-white border rounded" >
+                <div   class="col-md-3 mt-1"><img style="max-width:200px; max-height:200px"class="img-fluid img-responsive rounded product-image" [src]="item.img.data"></div>
+                <div class="col-md-6 mt-1">
+                    <h4>{{item.name}}</h4>
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>model: {{item.model}}</span>
+                    </div>
+                    <p class="text-justify text-truncate para mb-0">desc: {{item.desc}}<br><br></p>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+
+                    <div class="d-flex flex-column mt-4"><button [routerLink]="['/details', item._id]" class="btn btn-primary btn-sm" type="button">Details</button>
+                      <!-- <button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button> -->
+                  </div>
+                </div>
+            </div>
+    
+          </div>
+
+      </div>
+  </div>
+</div>
